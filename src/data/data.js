@@ -1,8 +1,8 @@
-const FOOLS_RUSH_IN = require('../../assets/images/Fools-Rush_In.jpeg')
-const THE_TAKE = require('../../assets/images/The-Take.jpeg')
-const ANGEL_HAS_FALLEN = require('../../assets/images/Angel-Has-Fallen.jpeg')
-const DUE_DATE = require('../../assets/images/Due-Date.jpeg')
-const CASINO_ROYALE = require('../../assets/images/Casion-Royale.jpeg')
+const FOOLS_RUSH_IN = require('../../assets/images/Fools-Rush-In.jpg')
+const THE_TAKE = require('../../assets/images/The-Take.jpg')
+const ANGEL_HAS_FALLEN = require('../../assets/images/Angel-Has-Fallen.jpg')
+const DUE_DATE = require('../../assets/images/Due-Date.jpg')
+const CASINO_ROYALE = require('../../assets/images/Casino-Royale.jpg')
 
 const SHOWS = [
     {
