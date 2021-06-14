@@ -4,8 +4,8 @@ import styled from 'styled-components/native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { COLORS } from '../../constants/styles'
 import { TouchableWithoutFeedback } from 'react-native' 
-const NETFLIX_LOGO = require('../../../assets/icons/netflix-logo.png')
 
+const NETFLIX_LOGO = require('../../../assets/icons/netflix-logo.png')
 
 const Container = styled.View `
     display: flex;
@@ -32,6 +32,7 @@ class Header extends Component {
     }
 
     render() {
+        
         const { openDrawer } = this.props;
         return (
             <Container>

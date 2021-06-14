@@ -13,9 +13,9 @@ const TitleContainer = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 10;
-  padding-left: 10;
-  padding-bottom: 10;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 `;
 
 const TitleText = styled.Text`
@@ -24,10 +24,10 @@ const TitleText = styled.Text`
 
 const SummaryContainer = styled.View`
   background-color: ${COLORS.GREY.BRIGHT_GREY};
-  padding-top: 10;
-  padding-right: 10;
-  padding-left: 10;
-  padding-bottom: 10;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 `;
 
 const SummaryText = styled.Text`
@@ -35,12 +35,12 @@ const SummaryText = styled.Text`
 `;
 
 const SummaryHeader = styled(SummaryText)`
-  margin-bottom: 15;
+  margin-bottom: 15px;
 `;
 
 const SummaryCreditsText = styled.Text`
   color: ${COLORS.GREY.BLACK_RUSSIAN};
-  margin-top: 5;
+  margin-top: 5px;
 `;
 
 const HeaderContainer = styled.View`
@@ -48,17 +48,17 @@ const HeaderContainer = styled.View`
 
 const ImageHeader = styled.Image`
   width: 100%;
-  height: 150;
-  margin-top: 10;
+  height: 150px;
+  margin-top: 10px;
 `;
 
 const BackIconContainer = styled.View`
-  margin-top: 10;
-  margin-left: 10;
+  margin-top: 10px;
+  margin-left: 10px;
 `;
 
 const PlayIconContainer = styled.View`
-  margin-left: 10;
+  margin-left: 10px;
 `;
 
 const MyListButton = styled.View`
@@ -66,20 +66,23 @@ const MyListButton = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 90;
-  height: 30;
+  width: 90px;
+  height: 30px;
   background-color: ${COLORS.GREY.BRIGHT_GREY};
-  margin-right: 10;
+  margin-right: 10px;
 `;
 
 const MyListButtonText = styled.Text`
   color: ${COLORS.WHITE.WHITE};
-  margin-left: 5;
+  margin-left: 5px;
 `;
 
 class ShowDetailsScreen extends Component {
   render() {
-    const { params } = this.props.navigation.state;
+    
+    const {creator, image, starring, summary, title } = this.props.route.params 
+    
+    // const { params } = this.props.navigation.state;
     return (
       <Container>
         <HeaderContainer>
@@ -88,7 +91,7 @@ class ShowDetailsScreen extends Component {
               <Icon name={'arrow-left'} size={30} color={COLORS.WHITE.WHITE} />
             </BackIconContainer>
           </TouchableOpacity>
-          <ImageHeader source={params.image} resizeMode={'contain'} />
+          <ImageHeader source={image} resizeMode={'contain'} />
           <TouchableOpacity onPress={() => {}}>
             <PlayIconContainer>
               <Icon name={'play-circle-o'} size={60} color={COLORS.WHITE.WHITE} />
@@ -96,7 +99,7 @@ class ShowDetailsScreen extends Component {
           </TouchableOpacity>
         </HeaderContainer>
         <TitleContainer>
-          <TitleText>{params.title}</TitleText>
+          <TitleText>{title}</TitleText>
           <TouchableOpacity onPress={() => {}}>
             <MyListButton>
               <Icon name="plus" size={10} color={COLORS.WHITE.WHITE} />
@@ -106,9 +109,9 @@ class ShowDetailsScreen extends Component {
         </TitleContainer>
         <SummaryContainer>
           <SummaryHeader>{'Summary'}</SummaryHeader>
-          <SummaryText>{params.summary}</SummaryText>
-          <SummaryCreditsText>{'Starring: '}{params.starring}</SummaryCreditsText>
-          <SummaryCreditsText>{'Creator: '}{params.creator}</SummaryCreditsText>
+          <SummaryText>{summary}</SummaryText>
+          <SummaryCreditsText>{'Starring: '}{starring}</SummaryCreditsText>
+          <SummaryCreditsText>{'Creator: '}{creator}</SummaryCreditsText>
         </SummaryContainer>
       </Container>
     );
